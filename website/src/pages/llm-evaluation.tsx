@@ -1281,10 +1281,11 @@ export default function AgentEvaluation() {
 
           <ul>
             <li>
-              <strong>Pre-deployment Testing:</strong> Before releasing new
-              prompts, models, or agent logic, run comprehensive evaluations
-              against benchmark datasets. Compare quality metrics to previous
-              versions to ensure changes improve, not degrade, your application.
+              <strong>Pre-deployment Testing:</strong> Before releasing new{" "}
+              <Link href="/prompt-registry">prompts</Link>, models, or agent
+              logic, run comprehensive evaluations against benchmark datasets.
+              Compare quality metrics to previous versions to ensure changes
+              improve, not degrade, your application.
             </li>
             <li>
               <strong>Continuous Quality Monitoring:</strong> In production,
@@ -1301,13 +1302,16 @@ export default function AgentEvaluation() {
               wrong.
             </li>
             <li>
-              <strong>A/B Testing Prompt Changes:</strong> Before deploying
-              prompt modifications to production, run{" "}
+              <strong>A/B Testing Prompt Changes:</strong> Before deploying{" "}
+              <Link href="/prompt-registry">prompt</Link> modifications to
+              production, run{" "}
               <Link href={MLFLOW_GENAI_DOCS_URL + "eval-monitor/"}>
                 side-by-side evaluations
               </Link>{" "}
               with LLM judges. Compare quality metrics to ensure changes improve
-              output quality.
+              output quality, or use{" "}
+              <Link href="/prompt-optimization">prompt optimization</Link> to
+              automate the improvement process entirely.
             </li>
             <li>
               <strong>Building Regression Datasets:</strong> Convert production
@@ -1692,13 +1696,15 @@ results = mlflow.genai.evaluate(
                 <strong>MLflow</strong>
               </Link>{" "}
               is the largest open-source{" "}
-              <strong>AI engineering platform</strong>, with over 30 million
-              monthly downloads. Thousands of organizations use MLflow to debug,
-              evaluate, monitor, and optimize production-quality AI agents and
-              LLM applications while controlling costs and managing access to
-              models and data. Backed by the Linux Foundation and licensed under
-              Apache 2.0, MLflow provides a complete evaluation solution with no
-              vendor lock-in.{" "}
+              <strong>
+                AI engineering platform for agents, LLMs, and ML models
+              </strong>
+              , with over 30 million monthly downloads. Thousands of
+              organizations use MLflow to debug, evaluate, monitor, and optimize
+              production-quality AI agents and LLM applications while
+              controlling costs and managing access to models and data. Backed
+              by the Linux Foundation and licensed under Apache 2.0, MLflow
+              provides a complete evaluation solution with no vendor lock-in.{" "}
               <Link href={MLFLOW_GENAI_DOCS_URL}>Get started →</Link>
             </p>
           </div>
@@ -1784,6 +1790,9 @@ results = mlflow.genai.evaluate(
               <Link href={MLFLOW_GENAI_DOCS_URL + "eval-monitor/scorers/"}>
                 Custom Scorers Documentation
               </Link>
+            </li>
+            <li>
+              <Link href="/prompt-optimization">Prompt Optimization Guide</Link>
             </li>
             <li>
               <Link href="/llm-tracing">LLM Tracing FAQ</Link>
